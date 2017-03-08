@@ -1,0 +1,5 @@
+#!/bin/bash
+
+FNAME=$(date +%F_%T)
+
+fswebcam -r 1280x720 --jpeg 85 $HOME'/Pictures/Webcam/shots/'$FNAME'.jpeg'
