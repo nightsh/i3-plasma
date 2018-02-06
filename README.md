@@ -28,8 +28,8 @@ properly, then proceed to installing the configuration.
   * a `$HOME/.local/bin` directory: `mkdir -p $HOME/.local/bin`
   * a `$HOME/.i3` directory: `mkdir -p $HOME/.i3`
 3. Symlink:
-  * the config: `ln -s $HOME/.i3/config $HOME/.i3/`
-  * the scripts: `ln -s $HOME/.i3/.local/bin/* $HOME/.local/bin/`
+  * the config: `ln -s $HOME/.i3-plasma/config $HOME/.i3/`
+  * the scripts: `ln -s $HOME/.i3-plasma/.local/bin/* $HOME/.local/bin/`
 4. Start or restart `i3`
 
 
