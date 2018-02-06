@@ -161,10 +161,10 @@ bindsym $mod+x exec krunner
 
 #---( direct launchers )---#
 
-bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Ctrl+Return exec terminology
-bindsym $mod+Shift+F7 exec --no-startup-id "nitrogen --restore"
+bindsym $mod+Return exec sakura
+bindsym $mod+backslash exec konsole
 bindsym $mod+Shift+Return exec "emacsclient -c"
+bindsym $mod+Shift+F7 exec --no-startup-id "nitrogen --restore"
 bindsym $mod+Shift+F1 exec "thunderbird"
 bindsym $mod+Shift+F2 exec "luakit"
 bindsym $mod+Shift+F3 exec "firefox"
@@ -173,7 +173,7 @@ bindsym $mod+Shift+Delete exec --no-startup-id "~/.local/bin/toggle_touchpad"
 bindsym $mod+Shift+p exec --no-startup-id "konsole -e htop"
 bindsym Print exec --no-startup-id "XDG_CURRENT_DESKTOP=kde spectacle"
 bindsym $mod+Print exec --no-startup-id "~/.local/bin/xflock4"
-bindsym $mod+backslash exec --no-startup-id "XDG_CURRENT_DESKTOP=kde dolphin"
+#bindsym $mod+backslash exec --no-startup-id "XDG_CURRENT_DESKTOP=kde dolphin"
 bindcode 148 exec --no-startup-id "XDG_CURRENT_DESKTOP=kde kcalc"
 
 # Key bindings recycling station:
@@ -197,7 +197,7 @@ bar {
     # status_command $HOME/.local/bin/conky-i3bar.sh
     # status_command i3status
     # status_command i3blocks
-		mode hide
+		mode invisible
     colors {
         background #111111
         statusline #ffffff
@@ -214,8 +214,8 @@ bar {
         urgent_workspace   #555555 #770000 #dddddd
     }
 
-    tray_output eDP1
-    #tray_output none
+    # tray_output eDP1
+    tray_output none
 }
 
 
@@ -246,10 +246,13 @@ exec_always --no-startup-id 'xset b off'
 #---( colors table )---#
 
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 #111111 #00b2b2 #2e9ef4
-client.focused_inactive #333333 #000000 #ffffff #484e50
+#client.focused          #4c7899 #111111 #00b2b2 #2e9ef4 #990000
+client.focused          #990000 #111111 #00b2b2 #2e9ef4
+client.focused_inactive #333333 #000000 #ffffff #484e50 
 client.unfocused        #333333 #000000 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000 #990000
+client.background       #000000
 
 
 #---( windows rules )---#
@@ -260,6 +263,7 @@ for_window [class="(?i)terminology"] border none
 for_window [class="(?i)dwb"] border none 
 for_window [class="(?i)luakit"] border none 
 for_window [class="(?i)rambox"] border none 
+for_window [class="(?i)franz"] border none 
 for_window [class="(?i)firefox"] border none
 for_window [class="(?i)iceweasel"] border none 
 for_window [class="(?i)jetbrains"] border none
@@ -268,9 +272,11 @@ for_window [class="(?i)kmail"] border none
 #for_window [class="(?i)emacs"] border none
 for_window [class="(?i)chrom"] border none
 for_window [class="(?i)gvim"] border none
+for_window [class="(?i)vivaldi"] border none
 
 # Float by name
 for_window [title="Nitrogen"] floating enable
+for_window [title="Install user style"] floating enable
 for_window [title="KCalc"] floating enable
 for_window [class="plasmashell"] floating enable
 

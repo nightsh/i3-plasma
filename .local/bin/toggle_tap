@@ -1,0 +1,10 @@
+#!/bin/sh
+
+STATE=$(synclient -l | grep TapButton1 | grep -oe '[^ ]\n*$' | awk '{$1=$1};1')
+
+if [ $STATE -eq '0' ]; then
+    synclient "TapButton1=1"
+else
+    synclient "TapButton1=0"
+fi
+
