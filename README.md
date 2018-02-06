@@ -1,5 +1,9 @@
 # i3 configuration to play well with KDE Plasma Desktop
 
+Note: I also posted it 
+[here](https://www.reddit.com/r/unixporn/comments/7vm0su/i3_plasma_ive_been_running_this_for_a_while/) 
+with a relevant and up to date screenshot.
+
 ## Install:
 
 ### Make i3 the default window manager for KDE
@@ -7,7 +11,8 @@
 First you have to create the `i3` launcher:
 
 ```
-@TODO Add the commands
+echo "export KDEWM=/usr/bin/i3" > ~/.config/plasma-workspace/env/set_window_manager.sh
+
 ```
 
 Then you have to start (or restart) KDE by choosing "KDE Plasma Desktop" in
