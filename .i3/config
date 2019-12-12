@@ -278,7 +278,9 @@ for_window [class="(?i)vivaldi"] border none
 for_window [title="Nitrogen"] floating enable
 for_window [title="Install user style"] floating enable
 for_window [title="KCalc"] floating enable
+
 for_window [class="plasmashell"] floating enable
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 
 # Float by type
